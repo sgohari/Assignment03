@@ -1,0 +1,38 @@
+﻿/* 
+    stylesheet for the masterpage
+*/
+#mainPage {
+    background-image: url(../images/MainBkg.jpg);
+    background-size:1400px;
+    background-attachment:fixed;
+}
+/*
+    Customizing the dive content
+*/
+#allpage
+ {
+    margin-left:auto;
+    margin-right:auto;
+    width:980px;
+    background-color:azure;
+    border-radius: 15px;
+    opacity:0.9;
+    
+}
+/*
+    diffent look for Footer
+*/
+footer {
+	background-color:white;
+	color:blue;
+	font-size: medium;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+footer:hover{
+    opacity:0.9;
+    color:green;
+    font-size:large;
+}
+
+
