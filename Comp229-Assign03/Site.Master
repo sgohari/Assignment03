@@ -7,32 +7,34 @@
        <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-       <title></title>
+       <title>Using SQL</title>
     <%--Css section --%>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
-    <link href="Content/StyleSheetForMain.css" rel="stylesheet" />
-    <link href="Content/IndexStyleSheet.css" rel="stylesheet" />
+    <link href="Content/MainStyleSheet.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body id="index">
+<body>
+    <div id="allpage">
     <form id="form1" runat="server">
     <div>
         <nav class="navbar navbar-inverse">
-  <div class="container" style="margin:auto; width:980px; background-color:royalblue">
+  <div class="container" style="margin:auto; width:980px; background-color:teal">
     <!-- Brand and toggle get grouped for better mobile display -->
 
     <div class="navbar-header">
-      <a class="navbar-brand" href="default">Home</a>
+      <a class="navbar-brand" href="default.aspx" ><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-         <li><a href="#">Student</a></li>
-        <li><a href="#">Enrollment</a></li>
-           <li><a href="#">Update</a></li>
+         <li><a href="#"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Student</a></li>
+        <li><a href="#"><i class="fa fa-user-plus fa-lg " aria-hidden="true"></i> Enrollment</a></li>
+    </ul>
+        <ul class="nav navbar-nav navbar-right">
+           <li><a href="#"><i class="fa fa-refresh fa-lg " aria-hidden="true"></i> Update</a></li>
       </ul>
   </div><!-- /.container-fluid -->
       </div>
@@ -40,8 +42,11 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
+      
     </div>
         
-    </form>
+    </form> 
+         <footer style="height: 28px">&nbsp; ©Copy right Syed Nasir COMP229, Assignment03 Centennial College</footer>
+        </div>
 </body>
 </html>

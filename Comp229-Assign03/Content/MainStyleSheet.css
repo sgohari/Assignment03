@@ -1,0 +1,32 @@
+﻿/* 
+    stylesheet for the masterpage
+*/
+body
+ {
+    background-color:gray;
+}
+/*
+    Customizing the dive content
+*/
+#allpage
+ {
+    margin-left:auto;
+    margin-right:auto;
+    width:980px;
+    background-color:azure;
+    border-radius: 15px;
+    
+}
+/*
+    diffent look for Footer
+*/
+footer {
+	background-color:burlywood;
+	color:firebrick;
+	font-size: large;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+    opacity:0.9;
+}
+
+
