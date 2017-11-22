@@ -75,9 +75,11 @@
     <Content Include="Content\IndexStyleSheet.css" />
     <Content Include="Content\StyleSheetForMain.css" />
     <Content Include="default.aspx" />
+    <Content Include="enrollment.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\MainStyleSheet.css" />
+    <Content Include="images\Logo-Home.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -108,6 +110,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="student.aspx" />
+    <Content Include="update.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +121,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enrollment.aspx.cs">
+      <DependentUpon>enrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enrollment.aspx.designer.cs">
+      <DependentUpon>enrollment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -128,6 +139,20 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="student.aspx.cs">
+      <DependentUpon>student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student.aspx.designer.cs">
+      <DependentUpon>student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="update.aspx.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="update.aspx.designer.cs">
+      <DependentUpon>update.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

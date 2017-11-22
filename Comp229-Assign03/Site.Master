@@ -30,11 +30,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-         <li><a href="#"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Student</a></li>
-        <li><a href="#"><i class="fa fa-user-plus fa-lg " aria-hidden="true"></i> Enrollment</a></li>
+         <li><a href="student.aspx"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Student</a></li>
+        <li><a href="enrollment.aspx"><i class="fa fa-user-plus fa-lg " aria-hidden="true"></i> Enrollment</a></li>
     </ul>
         <ul class="nav navbar-nav navbar-right">
-           <li><a href="#"><i class="fa fa-refresh fa-lg " aria-hidden="true"></i> Update</a></li>
+           <li><a href="update.aspx"><i class="fa fa-refresh fa-lg " aria-hidden="true"></i> Update</a></li>
       </ul>
   </div><!-- /.container-fluid -->
       </div>

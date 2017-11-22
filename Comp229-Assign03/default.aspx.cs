@@ -12,7 +12,7 @@ namespace Comp229_Assign03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString.AllKeys.Contains("pro_id") && Request.QueryString.AllKeys.Contains("actin"))
+            if (Request.QueryString.AllKeys.Contains("pro_id") && Request.QueryString.AllKeys.Contains("action"))
             {
                 string proID = Request.QueryString["pro_id"];
                 string action = Request.QueryString["action"];
