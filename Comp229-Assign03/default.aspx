@@ -2,8 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div>
-      <img src="images/Logo-Home.png" />
-  </div>
-    <h1>This is the Default page</h1>
+
+    <h1>List of all Students</h1>
+    <asp:DataList ID="StudentLS" runat="server" />
+   
+        <asp:Literal ID="detailLireral" runat="server" />
+        <asp:LinkButton ID="detailInfo" runat="server" />
+
+
+    
+    <%#Eval ("LastName") %>
+    <%#Eval ("firstMidName") %>
+    <%#Eval ("EnrollmentDate") %>
+
+   
  </asp:Content>

@@ -17,6 +17,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+     
     <div id="allpage">
     <form id="form1" runat="server">
     <div>
@@ -36,8 +37,11 @@
         <ul class="nav navbar-nav navbar-right">
            <li><a href="update.aspx"><i class="fa fa-refresh fa-lg " aria-hidden="true"></i> Update</a></li>
       </ul>
+        
   </div><!-- /.container-fluid -->
+      
       </div>
+            <img src="images/MspLogo.png" alt="brandLogo" height="42" />
 </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         

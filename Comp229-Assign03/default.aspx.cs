@@ -10,24 +10,25 @@ namespace Comp229_Assign03
 {
     public partial class _default : System.Web.UI.Page
     {
+        private SqlConnection connect;
+        private SqlCommand cmd;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString.AllKeys.Contains("pro_id") && Request.QueryString.AllKeys.Contains("action"))
+            try
             {
-                string proID = Request.QueryString["pro_id"];
-                string action = Request.QueryString["action"];
-            }
-
-        }
-        void forDatabases(string quaries)
-        {
-            string connection = "Data Source= ; Initail Catalog=Comp229Assign03; Integrated Security=True";
-            using (SqlConnection connect = new SqlConnection(connection))
-            {
+                connect = new SqlConnection(@"Data Source=laptop-o8ug7h3u\SQLEXPRESS; Initial Catalog = Comp229Assign03; Integrated Security = True");
                 connect.Open();
-                SqlCommand command = new SqlCommand(quaries, connect);
-                SqlDataReader read = command.ExecuteReader();
+                cmd = new SqlCommand("SELECT * FROM Students");
+                connect.Close();
+            }
+            catch (Exception)
+            {
+                
             }
         }
+
+        
+        
     }
 }
