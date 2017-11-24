@@ -1,0 +1,24 @@
+﻿table td {
+    height: 20px;
+    width: 150px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:larger;
+}
+table{
+    position:center;
+}
+#TableDiv{
+         width:980px;
+         margin-right:auto;
+         margin-right:auto;
+         position:center;
+         padding-left:20px;
+     }
+h1{
+    font-size:xx-large;
+    font-weight:bold;
+    text-align:center;
+    text-transform:uppercase;
+    font-family:'Bookman Old Style';
+    color:chocolate;
+}

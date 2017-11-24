@@ -11,7 +11,30 @@ namespace Comp229_Assign03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            TitlePage();
+        }
 
+        private void TitlePage()
+        {
+            switch (Page.Title)
+            {
+                case "Home":
+                    home.Attributes.Add("Class", "Active");
+                    Page.Title = string.Format("Nasir Home");
+                    break;
+                case "Student":
+                    home.Attributes.Add("Class", "Active");
+                    Page.Title = string.Format("Instituation Students");
+                    break;
+                case "Enrollment":
+                    home.Attributes.Add("Class", "Active");
+                    Page.Title = string.Format("Instituation Enrollment");
+                    break;
+                case "Update":
+                    home.Attributes.Add("Class", "Active");
+                    Page.Title = string.Format("Instituation Update");
+                    break;
+            }
         }
     }
 }

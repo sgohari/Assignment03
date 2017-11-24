@@ -13,6 +13,7 @@
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/MainStyleSheet.css" rel="stylesheet" />
+    <link href="Content/HomePageStyleSheet.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -23,14 +24,10 @@
     <div>
         <nav class="navbar navbar-inverse">
   <div class="container" style="margin:auto; width:980px; background-color:teal">
-    <!-- Brand and toggle get grouped for better mobile display -->
-
-    <div class="navbar-header">
-      <a class="navbar-brand" href="default.aspx" ><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home</a>
-    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+          <li id="home" runat="server"><a href="default.aspx"><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home</a></li>
          <li><a href="student.aspx"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Student</a></li>
         <li><a href="enrollment.aspx"><i class="fa fa-user-plus fa-lg " aria-hidden="true"></i> Enrollment</a></li>
     </ul>
@@ -50,7 +47,10 @@
     </div>
         
     </form> 
-         <footer style="height: 28px">&nbsp; ©Copy right Syed Nasir COMP229, Assignment03 Centennial College</footer>
+         <footer style="height: 28px">&nbsp; ©Copy right Syed Nasir COMP229, Assignment03 Centennial College
+              <%: DateTime.Now.Year %>
+
+         </footer>
         </div>
 </body>
 </html>
