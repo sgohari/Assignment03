@@ -20,19 +20,19 @@ namespace Comp229_Assign03
             {
                 case "Home":
                     home.Attributes.Add("Class", "Active");
-                    Page.Title = string.Format("Nasir Home");
+                    Page.Title = string.Format("Instituation Home Page");
                     break;
-                case "Student":
+                case "student":
                     home.Attributes.Add("Class", "Active");
-                    Page.Title = string.Format("Instituation Students");
+                    Page.Title = string.Format("Instituation Students Page");
                     break;
-                case "Enrollment":
+                case "enrollment":
                     home.Attributes.Add("Class", "Active");
-                    Page.Title = string.Format("Instituation Enrollment");
+                    Page.Title = string.Format("Instituation Enrollment Page");
                     break;
-                case "Update":
+                case "update":
                     home.Attributes.Add("Class", "Active");
-                    Page.Title = string.Format("Instituation Update");
+                    Page.Title = string.Format("Instituation Update Page");
                     break;
             }
         }

@@ -28,7 +28,7 @@ namespace Comp229_Assign03
             try { 
             conn = new SqlConnection(connectionString);
             conn.Open();
-            SqlCommand comm = conn.CreateCommand();
+            comm = conn.CreateCommand();
             comm.CommandType = CommandType.Text;
             comm.CommandText="Insert into Students values ('"+txtBxFname.Text+"','"+txtBxLname.Text+ "','"+txtBxEnrDate.Text+"')";
             comm.ExecuteNonQuery();
@@ -41,6 +41,15 @@ namespace Comp229_Assign03
                     Response.Redirect("default.aspx");
                 }
             }
-    
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("update.aspx");
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("default.aspx");
+        }
     }
 }
