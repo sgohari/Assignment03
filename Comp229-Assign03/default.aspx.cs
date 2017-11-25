@@ -20,17 +20,13 @@ namespace Comp229_Assign03
                 BindList();
             }
         }
-        protected void StudentsList_ItemCommand(object source, RepeaterCommandEventArgs e)
+        protected void StudentsList_ItemCommand(object source, GridView e)
         {
             // Which button was clicked?
-            if (e.CommandName == "MoreDetails")
+            if (e.ID== "StudentGridView")
             {
-   
-            }
-            else if (e.CommandName == "Edit")
-            {
-               
-                BindList();
+                    Session["currentStudentID"] = e.ID.ToString();
+                    Response.Redirect("student.aspx");
             }
         }
         private void BindList()
@@ -44,9 +40,7 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command
-            comm = new SqlCommand(
-              "SELECT LastName,FirstMidName FROM Students",
-              conn);
+            comm = new SqlCommand("Select * from Students;", conn);
             // Enclose database code in Try-Catch-Finally
             try
             {
@@ -55,8 +49,8 @@ namespace Comp229_Assign03
                 // Execute the command
                 reader = comm.ExecuteReader();
                 // Bind the reader to the DataList
-                MyRepeater.DataSource = reader;
-                MyRepeater.DataBind();
+                StudentGridView.DataSource = reader;
+                StudentGridView.DataBind();
 
                 // Close the reader
                 reader.Close();
@@ -71,6 +65,11 @@ namespace Comp229_Assign03
         protected void btnInsert_Click(object sender, EventArgs e)
         {
           
+        }
+
+        protected void StudentGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
         }
     }
 }

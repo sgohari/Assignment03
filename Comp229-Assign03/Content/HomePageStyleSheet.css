@@ -4,11 +4,11 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: larger;
 }
-
+/* for positioning table */
 table {
     position: center;
 }
-
+/*div where table is placed */
 #TableDiv {
     width: 980px;
     margin-right: auto;
@@ -17,7 +17,7 @@ table {
     padding-left: 12px;
     padding-right:12px;
 }
-
+/*customized head of h1*/
 h1 {
     font-size: xx-large;
     font-weight: bold;
@@ -26,7 +26,12 @@ h1 {
     font-family: 'Bookman Old Style';
     color: chocolate;
 }
-
+/*Desing for banner *//**/
+#banner{
+            width: 980px;
+            height: 100px;
+       }
+/*special effect for hr*/
 hr {
     display: block;
     margin-top: 0.5em;

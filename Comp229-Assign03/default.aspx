@@ -1,34 +1,26 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Comp229_Assign03._default" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <hr />
-    <%--I personally designed the simple banner, with looking on other banners. --%>
-    <img src="images/brandInfo.png" />
-    <h1>List of all Students</h1>
-     <div id="TableDiv">
-     <asp:Repeater runat="server" ID="MyRepeater">
-        
-    <ItemTemplate>
-        <table >
-        <tr>
-            <td>
-                <strong><%# Eval("LastName") %></strong>
-            </td>
-            <td>
-              <strong> <%# Eval("FirstMidName") %></strong> 
-            </td>
-        </tr>
-            </table>
-    </ItemTemplate>
-         <SeparatorTemplate>
-            <hr />
-        </SeparatorTemplate>
-</asp:Repeater>  
-         <br /> 
-    <%-- link for adding new student in a new page. --%>
-         <a class="btn btn-primary btn-lg" href="addstudents.aspx">Add New Student</a>
-    
-         <br />
-         <br />
-         </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-8">
+                <h1>Students list</h1>
+                <asp:GridView ID="StudentGridView" runat="server" AutoGenerateColumns="false"
+                    cssClass="table table-bordered table-striped table-hover" DataKeyNames="StudentID"
+                    OnRowDeleting="StudentGridView_RowDeleting">
+                    <Columns>
+                        <asp:HyperLinkField DataTextField="LastName" HeaderText="Last Name" Visible="true" DataNavigateUrlFields="StudentID"
+                             DataNavigateUrlFormatString="student.aspx?StudentID={0}" />
+                        <asp:BoundField DataField="FirstMidName" HeaderText="First Name" Visible="true" />
+                        <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i>Delete"
+                            ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
+                    </Columns>
+                </asp:GridView>
+                <a class="btn btn-primary btn-lg" href="addstudents.aspx"><i class="fa fa-plus"></i> Add New Student</a>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
  </asp:Content>
+
