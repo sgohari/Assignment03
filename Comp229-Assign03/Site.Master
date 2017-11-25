@@ -17,6 +17,11 @@
     <link href="Content/AddStudentStyleSheet.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+       <style type="text/css">
+           .auto-style1 {
+               width: 980px;
+           }
+       </style>
 </head>
 <body>
      
@@ -39,7 +44,7 @@
   </div><!-- /.container-fluid -->
       
       </div>
-            <img src="images/MspLogo.png" alt="brandLogo" height="42" />
+            <img src="images/MspLogo.png" alt="brandLogo" height="42" class="auto-style1" />
 </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
