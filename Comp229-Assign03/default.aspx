@@ -12,8 +12,7 @@
                         <asp:HyperLinkField DataTextField="LastName" HeaderText="Last Name" Visible="true" DataNavigateUrlFields="StudentID"
                              DataNavigateUrlFormatString="student.aspx?StudentID={0}" />
                         <asp:BoundField DataField="FirstMidName" HeaderText="First Name" Visible="true" />
-                        <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i>Delete"
-                            ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
+
                     </Columns>
                 </asp:GridView>
                 <a class="btn btn-primary btn-lg" href="addstudents.aspx"><i class="fa fa-plus"></i> Add New Student</a>

@@ -10,7 +10,7 @@
                     OnRowDeleting="SgvStudent_RowDeleting">
                     <Columns>
                         <asp:HyperLinkField DataTextField="StudentID" HeaderText="Student Id" Visible="true" DataNavigateUrlFields="StudentID"
-                             DataNavigateUrlFormatString="student.aspx?StudentID={0}" />
+                             DataNavigateUrlFormatString="update.aspx?StudentID={0}" />
                        
                         <asp:BoundField DataField="LastName" HeaderText="Last Name" Visible="true" />
                         <asp:BoundField DataField="FirstMidName" HeaderText="First Name" Visible="true" />

@@ -53,7 +53,7 @@
     </div>
         
     </form> 
-         <footer style="height: 28px">&nbsp; ©Copy right Syed Nasir COMP229, Assignment03 Centennial College
+         <footer style="height: 28px">&nbsp; ©Copy right Syed Nasir COMP229 | Assignment03 | Centennial College
               <%: DateTime.Now.Year %>
 
          </footer>

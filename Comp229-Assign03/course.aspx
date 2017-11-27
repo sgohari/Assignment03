@@ -18,10 +18,14 @@
                      <%--  --%>
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i>Delete"
                             ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
+                        <asp:CommandField HeaderText="Edit" EditText="<i class='fa fa-pencil-square-o'></i>Edit" ShowEditButton="True" ButtonType="Link" ControlStyle-CssClass="btn btn-warning btn-sm" />
                     </Columns>
                 </asp:GridView>
-                </div>>
-            <a class="btn btn-primary btn-lg" href="update.aspx">Update Page</a>
+                <a class="btn btn-primary btn-lg" href="update.aspx">To Update Page</a>
+                <br />
+                <br />
+                </div>
            </div>
-        </div>>
+            
+        </div>
 </asp:Content>

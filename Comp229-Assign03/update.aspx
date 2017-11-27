@@ -24,7 +24,9 @@
                  </td>
              </tr>
              </table>
-
+      <asp:Button ID="btnSave" Text="Save" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary btn-lg" />
+         <asp:Button ID="btnCancel" Text="Cancel" runat="server" OnClick="btnCancel_Click" CssClass="btn btn-primary btn-lg" />
+         <asp:Button ID="btnUpdate" Text="Update" runat="server" OnClick="btnUpdate_Click" CssClass="btn btn-primary btn-lg" />
          <br />
          <br />
      </div>

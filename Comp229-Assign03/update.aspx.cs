@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,10 @@ namespace Comp229_Assign03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            UpdateBindList();
+            if (!IsPostBack)
+            {
+                this.UpdateBindList();
+            }
         }
         private void UpdateBindList()
         {
@@ -29,7 +33,7 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command
-            comm = new SqlCommand("SELECT * FROM Students where StudentID=" + StudentID, conn);
+            comm = new SqlCommand("SELECT * FROM Students where StudentID="+StudentID, conn);
             // Enclose database code in Try-Catch-Finally
             try
             {
@@ -37,6 +41,13 @@ namespace Comp229_Assign03
                 conn.Open();
                 // Execute the command
                 reader = comm.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtBxLname.Text += reader["LastName"];
+                    txtBxFname.Text += reader["FirstMidName"];
+                    txtBxEnrDate.Text += reader["EnrollmentDate"];
+                    //txtBxEnrDate.Text += reader["EnrollmentDate"];
+                }
 
                 
                 // Bind the reader to the DataList
@@ -53,5 +64,38 @@ namespace Comp229_Assign03
             }
         }
 
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            SqlCommand comm;
+            // Read the connection string from Web.config
+            string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
+            try
+            {
+                conn = new SqlConnection(connectionString);
+                conn.Open();
+                comm = conn.CreateCommand();
+                comm.CommandType = CommandType.Text;
+                comm.CommandText = "Insert into Students values ('" + txtBxFname.Text + "','" + txtBxLname.Text + "','" + txtBxEnrDate.Text + "')";
+                comm.ExecuteNonQuery();
+                conn.Close();
+
+            }
+            catch (Exception) { }
+            finally
+            {
+                Response.Redirect("default.aspx");
+            }
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("default.aspx");
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("default.aspx");
+        }
     }
 }
