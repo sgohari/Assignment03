@@ -78,7 +78,7 @@
     <Content Include="Content\IndexStyleSheet.css" />
     <Content Include="Content\StyleSheetForMain.css" />
     <Content Include="default.aspx" />
-    <Content Include="enrollment.aspx" />
+    <Content Include="course.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\MainStyleSheet.css" />
@@ -133,12 +133,12 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="enrollment.aspx.cs">
-      <DependentUpon>enrollment.aspx</DependentUpon>
+    <Compile Include="course.aspx.cs">
+      <DependentUpon>course.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="enrollment.aspx.designer.cs">
-      <DependentUpon>enrollment.aspx</DependentUpon>
+    <Compile Include="course.aspx.designer.cs">
+      <DependentUpon>course.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

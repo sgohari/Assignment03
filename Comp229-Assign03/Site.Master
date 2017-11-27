@@ -35,7 +35,7 @@
       <ul class="nav navbar-nav">
           <li id="home" runat="server"><a href="default.aspx"><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home</a></li>
          <li id="student" runat="server"><a href="student.aspx"><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i> Student</a></li>
-        <li id="enrollment" runat="server"><a href="enrollment.aspx"><i class="fa fa-user-plus fa-lg " aria-hidden="true"></i> Enrollment</a></li>
+        <li id="cource" runat="server"><a href="course.aspx"><i class="fa fa-user-plus fa-lg " aria-hidden="true"></i> Course</a></li>
     </ul>
         <ul class="nav navbar-nav navbar-right">
            <li id="update" runat="server"><a href="update.aspx"><i class="fa fa-refresh fa-lg " aria-hidden="true"></i> Update</a></li>

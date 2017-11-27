@@ -13,12 +13,30 @@ namespace Comp229_Assign03 {
     public partial class update {
         
         /// <summary>
-        /// myRepeater control.
+        /// txtBxFname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater myRepeater;
+        protected global::System.Web.UI.WebControls.TextBox txtBxFname;
+        
+        /// <summary>
+        /// txtBxLname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBxLname;
+        
+        /// <summary>
+        /// txtBxEnrDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBxEnrDate;
     }
 }

@@ -49,13 +49,13 @@ namespace Comp229_Assign03 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl student;
         
         /// <summary>
-        /// enrollment control.
+        /// cource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl enrollment;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cource;
         
         /// <summary>
         /// update control.

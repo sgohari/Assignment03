@@ -1,0 +1,1 @@
+﻿SELECT * FROM Courses where CourseID=(Select CourseID from Enrollments where StudentID=300000);

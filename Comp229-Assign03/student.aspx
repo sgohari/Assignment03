@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-offset-1 col-md-8">
                 <h1> Student's Details</h1>
-                <asp:GridView ID="SgvStudent" runat="server" AutoGenerateColumns="false"
+                <asp:GridView ID="GvStudent" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover" DataKeyNames="StudentID"
                     OnRowDeleting="SgvStudent_RowDeleting">
                     <Columns>
@@ -20,16 +20,14 @@
                             ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
                     </Columns>
                 </asp:GridView>
-                <asp:GridView ID="CourseGridView" runat="server" AutoGenerateColumns="false"
+                <%-- GrideView for Course  --%>
+                <asp:GridView ID="GvCourse" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover" >
                     <Columns>
-                        <asp:HyperLinkField DataTextField="CourseID" HeaderText="Course Id" Visible="true" DataNavigateUrlFields="CourseID"
+                        <asp:HyperLinkField DataTextField="Title" HeaderText="Course Name" Visible="true" DataNavigateUrlFields="CourseID"
                              DataNavigateUrlFormatString="Course.aspx?CourseID={0}" />
-                       
                         <asp:BoundField DataField="Credits" HeaderText="Credits" Visible="true" />
-                       
-                       
-                        
+                       <asp:BoundField DataField="DepartmentID" HeaderText="Department Number" Visible="true" />
                     </Columns>
                 </asp:GridView>
                 <a class="btn btn-primary btn-lg" href="addstudents.aspx"><i class="fa fa-plus"></i> Add New Student</a>
