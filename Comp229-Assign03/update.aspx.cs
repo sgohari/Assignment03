@@ -76,7 +76,7 @@ namespace Comp229_Assign03
                 conn.Open();
                 comm = conn.CreateCommand();
                 comm.CommandType = CommandType.Text;
-                comm.CommandText = "Insert into Students values ('" + txtBxFname.Text + "','" + txtBxLname.Text + "','" + txtBxEnrDate.Text + "')";
+                //comm.CommandText = update Students set LastName = 'Amooo' WHERE StudentID = 301001;
                 comm.ExecuteNonQuery();
                 conn.Close();
 
@@ -95,7 +95,34 @@ namespace Comp229_Assign03
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            Response.Redirect("default.aspx");
+            int StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
+            String LName = Convert.ToString(txtBxFname.Text);
+            // Define data objects
+            SqlConnection conn;
+            SqlCommand comm;
+            SqlDataReader reader;
+            // Read the connection string from Web.config
+            string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
+            // Initialize connection
+            conn = new SqlConnection(connectionString);
+            // Create command
+            comm = new SqlCommand("update Students set LastName = '" + txtBxLname.Text+"', FirstMidName='"+txtBxFname.Text+"', EnrollmentDate= '"+txtBxEnrDate.Text+"' WHERE StudentID = " + StudentID, conn);
+            // Enclose database code in Try-Catch-Finally
+            try
+            {
+                // Open the connection
+                conn.Open();
+                // Execute the command
+                reader = comm.ExecuteReader();
+                   // Close the reader
+                reader.Close();
+            }
+            finally
+            {
+                // Close the connection
+                conn.Close();
+                Response.Redirect("default.aspx");
+            }
         }
     }
 }

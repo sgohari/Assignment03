@@ -72,6 +72,7 @@ namespace Comp229_Assign03
         protected void SgvStudent_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
 
+
         }
         private void CourseBindList()
         {
