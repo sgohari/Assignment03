@@ -15,6 +15,7 @@ namespace Comp229_Assign03
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //code from demo, cannot change the names
             if (!IsPostBack)
             {
                 BindList();
@@ -31,7 +32,7 @@ namespace Comp229_Assign03
         }
         private void BindList()
         {
-            // Define data objects
+            // Define data objects. it is taken from demo code. 
             SqlConnection conn;
             SqlCommand comm;
             SqlDataReader reader;
@@ -44,7 +45,7 @@ namespace Comp229_Assign03
             // Enclose database code in Try-Catch-Finally
             try
             {
-                // Open the connection
+                // Open the connection. use demo code and adding GrideView
                 conn.Open();
                 // Execute the command
                 reader = comm.ExecuteReader();

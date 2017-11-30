@@ -7,7 +7,7 @@
                 <h1> Student's Details</h1>
                 <asp:GridView ID="GvStudent" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover" DataKeyNames="StudentID"
-                    OnRowDeleting="SgvStudent_RowDeleting">
+                    OnRowDeleting="GvStudent_RowDeleting">
                     <Columns>
                         <asp:HyperLinkField DataTextField="StudentID" HeaderText="Student Id" Visible="true" DataNavigateUrlFields="StudentID"
                              DataNavigateUrlFormatString="update.aspx?StudentID={0}" />
@@ -21,7 +21,7 @@
                     </Columns>
                 </asp:GridView>
                 <%-- GrideView for Course  --%>
-                <asp:GridView ID="GvCourse" runat="server" AutoGenerateColumns="false"
+                <asp:GridView ID="GvCourseInStudentPage" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover" >
                     <Columns>
                         <asp:HyperLinkField DataTextField="Title" HeaderText="Course Name" Visible="true" DataNavigateUrlFields="CourseID"

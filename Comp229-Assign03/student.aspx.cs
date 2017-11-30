@@ -13,6 +13,7 @@ namespace Comp229_Assign03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 BindList();
@@ -36,8 +37,9 @@ namespace Comp229_Assign03
         }
         private void BindList()
         {
+            //declearing variable to store StudenID and convert it to Int, than running the query. 
             int StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
-            // Define data objects
+            // Define data objects. taken from demo codes
             SqlConnection conn;
             SqlCommand comm;
             SqlDataReader reader;
@@ -45,7 +47,7 @@ namespace Comp229_Assign03
             string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
             // Initialize connection
             conn = new SqlConnection(connectionString);
-            // Create command
+            // Create command and queris
             comm = new SqlCommand("SELECT * FROM Students where StudentID="+StudentID,conn);
             // Enclose database code in Try-Catch-Finally
             try
@@ -68,14 +70,10 @@ namespace Comp229_Assign03
             }
         }
 
-        
-        protected void SgvStudent_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-
-
-        }
+        //Method for Binding data in Course page.
         private void CourseBindList()
         {
+            //Variable for storing types and converting than setting it for query
             int StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
             // Define data objects
             SqlConnection conn;
@@ -85,7 +83,7 @@ namespace Comp229_Assign03
             string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
             // Initialize connection
             conn = new SqlConnection(connectionString);
-            // Create command
+            // Create command for database to be shown
             comm = new SqlCommand("SELECT * FROM Courses where CourseID IN (Select CourseID from Enrollments where StudentID=" + StudentID + ")", conn);
             //Enclose database code in Try - Catch - Finally
             try
@@ -95,8 +93,8 @@ namespace Comp229_Assign03
                 // Execute the command
                 reader = comm.ExecuteReader();
                 // Bind the reader to the DataList
-                GvCourse.DataSource = reader;
-                GvCourse.DataBind();
+                GvCourseInStudentPage.DataSource = reader;
+                GvCourseInStudentPage.DataBind();
 
                 // Close the reader
                 reader.Close();
@@ -105,6 +103,43 @@ namespace Comp229_Assign03
             {
                 // Close the connection
                 conn.Close();
+            }
+        }
+
+        protected void GvStudent_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            //declearing variable to store StudenID and convert it to Int, than running the query. 
+            int StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
+            // Define data objects. taken from demo codes
+            SqlConnection conn;
+            SqlCommand comm;
+            SqlDataReader reader;
+            // Read the connection string from Web.config
+            string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
+            // Initialize connection
+            conn = new SqlConnection(connectionString);
+            // Create command and queris
+            comm = new SqlCommand("DELETE FROM Students where StudentID=" + StudentID, conn);
+            // Enclose database code in Try-Catch-Finally
+            try
+            {
+                // Open the connection
+                conn.Open();
+                // Execute the command
+                reader = comm.ExecuteReader();
+                // Bind the reader to the DataList
+                GvStudent.DataSource = reader;
+                GvStudent.DataBind();
+
+                // Close the reader
+                reader.Close();
+            }
+            finally
+            {
+                // Close the connection
+                conn.Close();
+                Response.Redirect("default.aspx");
+
             }
         }
     }

@@ -36,8 +36,8 @@ namespace Comp229_Assign03
                 // Execute the command
                 reader = comm.ExecuteReader();
                 // Bind the reader to the DataList
-                GvCourse1.DataSource = reader;
-                GvCourse1.DataBind();
+                GvCourse.DataSource = reader;
+                GvCourse.DataBind();
 
                 // Close the reader
                 reader.Close();
@@ -50,6 +50,7 @@ namespace Comp229_Assign03
         }
         protected void StudentGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            //for responsing the user requestion. 
             int StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
             //String LName = Convert.ToString(txtBxFname.Text);
             // Define data objects
@@ -69,6 +70,9 @@ namespace Comp229_Assign03
                 conn.Open();
                 // Execute the command
                 reader = comm.ExecuteReader();
+                // Bind the reader to the DataList
+                GvCourse.DataSource = reader;
+                GvCourse.DataBind();
                 // Close the reader
                 reader.Close();
             }

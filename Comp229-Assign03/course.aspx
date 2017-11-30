@@ -5,7 +5,7 @@
      <div class="container">
         <div class="row">
             <div class="col-md-offset-1 col-md-8">
-    <asp:GridView ID="GvCourse1" runat="server" AutoGenerateColumns="false"
+    <asp:GridView ID="GvCourse" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover" DataKeyNames="StudentID"
                     OnRowDeleting="StudentGridView_RowDeleting">
                     <Columns>

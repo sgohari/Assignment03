@@ -11,9 +11,10 @@ namespace Comp229_Assign03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // THe load page events
             TitlePage();
         }
-
+        // this method will shows the name of the page when it is active
         private void TitlePage()
         {
             switch (Page.Title)
