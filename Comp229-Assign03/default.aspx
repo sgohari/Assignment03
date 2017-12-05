@@ -18,7 +18,7 @@
 
                     </Columns>
                 </asp:GridView>
-                <a class="btn btn-primary btn-lg" href="addstudents.aspx"><i class="fa fa-plus"></i> Add New Student</a>
+                <a id="PageBtns" class="btn-lg, " href="addstudents.aspx"><i class="fa fa-plus"></i> Add New Student</a>
                 <br />
                 <br />
             </div>

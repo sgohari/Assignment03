@@ -23,33 +23,41 @@ namespace Comp229_Assign03
 
         }
 
-        protected void btnSave_Click(object sender, EventArgs e)
-        {
-            try { 
-            conn = new SqlConnection(connectionString);
-            conn.Open();
-            comm = conn.CreateCommand();
-            comm.CommandType = CommandType.Text;
-            comm.CommandText="Insert into Students values ('"+txtBxFname.Text+"','"+txtBxLname.Text+ "','"+txtBxEnrDate.Text+"')";
-            comm.ExecuteNonQuery();
-            conn.Close();
-
-                }
-                catch (Exception) { }
-                finally
-                {
-                    Response.Redirect("default.aspx");
-                }
-            }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("update.aspx");
-        }
-
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("default.aspx");
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                conn = new SqlConnection(connectionString);
+                conn.Open();
+                comm = conn.CreateCommand();
+                comm.CommandType = CommandType.Text;
+                comm.CommandText = "Insert into Students values ('" + txtBxFname.Text + "','" + txtBxLname.Text + "','" + txtBxEnrDate.Text + "')";
+                comm.Parameters.Add("@txtBxFname", System.Data.SqlDbType.NVarChar, 50);
+                comm.Parameters["@FirstMidName"].Value = txtBxFname.Text;
+                comm.Parameters.Add("@txtBxLname", System.Data.SqlDbType.NVarChar, 50);
+                comm.Parameters["LastName"].Value = txtBxLname.Text;
+                comm.Parameters.Add("@EnrollmentDate", System.Data.SqlDbType.Date);
+                comm.Parameters["@txtBxEnrDate"].Value = txtBxEnrDate.Text;
+                comm.ExecuteNonQuery();
+                conn.Close();
+
+            }
+
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                Response.Redirect("default.aspx");
+
+            }
         }
     }
 }

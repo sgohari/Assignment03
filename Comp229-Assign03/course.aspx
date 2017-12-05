@@ -21,7 +21,7 @@
                         <asp:CommandField HeaderText="Edit" EditText="<i class='fa fa-pencil-square-o'></i>Edit" ShowEditButton="True" ButtonType="Link" ControlStyle-CssClass="btn btn-warning btn-sm" />
                     </Columns>
                 </asp:GridView>
-                <a class="btn btn-primary btn-lg" href="update.aspx">To Update Page</a>
+                <a id="PageBtns" class="btn-lg" href="update.aspx">To Update Page</a>
                 <br />
                 <br />
                 </div>

@@ -7,6 +7,7 @@
                  <td class="WidthForColunms">First Name:</td>
                  <td>
                  <asp:TextBox ID="txtBxFname" runat="server"></asp:TextBox><br />
+                             
                  </td>
              </tr>
      
@@ -23,9 +24,9 @@
                  </td>
              </tr>
              </table>
-         <asp:Button ID="btnSave" Text="Save" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary btn-lg" />
-         <asp:Button ID="btnCancel" Text="Cancel" runat="server" OnClick="btnCancel_Click" CssClass="btn btn-primary btn-lg" />
-         <asp:Button ID="btnUpdate" Text="Update" runat="server" OnClick="btnUpdate_Click" CssClass="btn btn-primary btn-lg" />
+         <asp:Button ID="btnSave" Text="Save" runat="server" OnClick="btnSave_Click" CssClass="PageBtns"  />
+         <asp:Button ID="btnCancel" Text="Cancel" runat="server" OnClick="btnCancel_Click" CssClass="PageBtns" />
+     
          <br />
          <br />
      </div>

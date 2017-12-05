@@ -45,3 +45,47 @@ hr {
     border-width: 2px;
     color:red;
 }
+/*designing the button for adding student. */
+#PageBtns {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #240D24;
+  border: none;
+  border-radius: 15px;
+}
+
+#PageBtns:hover{background-color:chocolate}
+
+#PageBtns:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*Created class to be accessed by asp tags*/
+.PageBtns {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #240D24;
+  border: none;
+  border-radius: 15px;
+}
+
+.PageBtns:hover{background-color:chocolate}
+
+.PageBtns:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
