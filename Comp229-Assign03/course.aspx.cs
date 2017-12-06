@@ -62,6 +62,9 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command
+            //comm = new SqlCommand("DELETE FROM Enrollments where StudentID =" + StudentID, conn);
+            comm = new SqlCommand("DELETE FROM Enrollments WHERE StudentID = @StudentID", conn);
+            comm.Parameters.AddWithValue("@StudentID", StudentID);
             comm = new SqlCommand("DELETE FROM Students WHERE StudentID = " + StudentID, conn);
             // Enclose database code in Try-Catch-Finally
             try
@@ -69,7 +72,7 @@ namespace Comp229_Assign03
                 // Open the connection
                 conn.Open();
                 // Execute the command
-                reader = comm.ExecuteReader();
+                reader = comm.ExecuteReader(); 
                 // Bind the reader to the DataList
                 GvCourse.DataSource = reader;
                 GvCourse.DataBind();

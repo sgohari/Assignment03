@@ -15,6 +15,7 @@ namespace Comp229_Assign03
 
         SqlConnection conn;
         SqlCommand comm;
+        
         // Read the connection string from Web.config
         string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
         // Initialize connection
@@ -37,17 +38,17 @@ namespace Comp229_Assign03
                
                 comm = conn.CreateCommand();
                 comm.CommandType = CommandType.Text;
-                comm = new SqlCommand("INSERT INTO Students (FirstMidName,LastName,EnrollmentDate) Values(@FirstName, @LastName, @EnrollmentDate)", conn);
+                //adding student to enrollments table. 
+                //comm = new SqlCommand("INSERT INTO Enrollments(StudentID) VALUES (@StudentID=Id); Insert SCOPE_IDENTITY();", conn);
+                ////parametarized Query for adding to enrollment.
+                //comm.Parameters.AddWithValue("@StudentID", txtBxStudentID.Text);
+                //comm.ExecuteNonQuery();
+                //comm.Parameters.Clear();
+                comm= new SqlCommand("INSERT INTO Students (FirstMidName,LastName,EnrollmentDate) Values(@FirstName, @LastName, @EnrollmentDate)", conn);
+                //paramaterarized quaries for saving values to the StudentTable.
                 comm.Parameters.AddWithValue("FirstName", txtBxFname.Text);
                 comm.Parameters.AddWithValue("@LastName", txtBxLname.Text);
                 comm.Parameters.AddWithValue("@EnrollmentDate", txtBxEnrDate.Text);
-                //comm.CommandText = "Insert into Students values ('" + txtBxFname.Text + "','" + txtBxLname.Text + "','" + txtBxEnrDate.Text + "')";
-                //comm.Parameters.Add("@FirstName", System.Data.SqlDbType.NVarChar, 50);
-                //comm.Parameters["@FirstMidName"].Value = txtBxFname.Text;
-                //comm.Parameters.Add("@LastName", System.Data.SqlDbType.NVarChar, 50);
-                //comm.Parameters["LastName"].Value = txtBxLname.Text;
-                //comm.Parameters.Add("@EnrollmentDate", System.Data.SqlDbType.Date);
-                //comm.Parameters["@txtBxEnrDate"].Value = txtBxEnrDate.Text;
                 conn.Open();
                 comm.ExecuteNonQuery();
                 conn.Close();

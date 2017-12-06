@@ -51,5 +51,10 @@ namespace Comp229_Assign03
 
             }
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("default.aspx");
+        }
     }
 }

@@ -78,6 +78,7 @@ namespace Comp229_Assign03
             // Define data objects
             SqlConnection conn;
             SqlCommand comm;
+         
             SqlDataReader reader;
             // Read the connection string from Web.config
             string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
@@ -113,26 +114,30 @@ namespace Comp229_Assign03
             // Define data objects. taken from demo codes
             SqlConnection conn;
             SqlCommand comm;
+            SqlCommand commTwo;
             SqlDataReader reader;
+            SqlDataReader readerTwo;
             // Read the connection string from Web.config
             string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
             // Initialize connection
             conn = new SqlConnection(connectionString);
-            // Create command and queris
-            comm = new SqlCommand("DELETE FROM Students where StudentID=" + StudentID, conn);
+            // Create command for deleting the reference
+            commTwo = new SqlCommand("DELETE FROM Enrollments where StudentID=" + StudentID, conn);
+           //command for deleting from student table.
+            comm = new SqlCommand("DELETE FROM Students Where StudentID=" + StudentID, conn);
             // Enclose database code in Try-Catch-Finally
             try
             {
                 // Open the connection
                 conn.Open();
                 // Execute the command
-                reader = comm.ExecuteReader();
-                // Bind the reader to the DataList
-                GvStudent.DataSource = reader;
-                GvStudent.DataBind();
+                reader = commTwo.ExecuteReader();
+                reader.Close();
+
+                readerTwo = comm.ExecuteReader();
 
                 // Close the reader
-                reader.Close();
+                readerTwo.Close();
             }
             finally
             {

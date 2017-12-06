@@ -3,6 +3,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div id="addStudent">
          <table>
+             <tr>
+                 <td class="WidthForColunms">StudentID:</td>
+                 <td>
+                 <asp:TextBox ID="txtBxStudentID" runat="server" ></asp:TextBox><br />
+           
+                 </td>
+             </tr>
               <tr>
                  <td class="WidthForColunms">First Name:</td>
                  <td>
