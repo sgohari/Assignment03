@@ -17,7 +17,12 @@
                         <asp:BoundField DataField="FirstMidName" HeaderText="First Name" Visible="true" />
 
                     </Columns>
+                    <AlternatingRowStyle BackColor="Menu"/>
+     
                 </asp:GridView>
+                <%-- this button is taking user to add student page.
+                     I created the student page because of simplacity.
+                    I could not do all the functinality of the requirmet in the same page. --%>
                 <a id="PageBtns" class="btn-lg, " href="addstudents.aspx"><i class="fa fa-plus"></i> Add New Student</a>
                 <br />
                 <br />

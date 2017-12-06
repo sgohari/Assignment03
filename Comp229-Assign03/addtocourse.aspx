@@ -1,26 +1,26 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addstudents.aspx.cs" Inherits="Comp229_Assign03.addstudents" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addtocourse.aspx.cs" Inherits="Comp229_Assign03.addtocourse" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div id="addStudent">
+            <div id="addCourse">
          <table>
               <tr>
-                 <td class="WidthForColunms">First Name:</td>
+                 <td class="WidthForColunms">Title:</td>
                  <td>
-                 <asp:TextBox ID="txtBxFname" runat="server" ></asp:TextBox><br />
-           
+                 <asp:TextBox ID="txtBxTitle" runat="server"></asp:TextBox><br />
+                             
                  </td>
              </tr>
      
              <tr>
-                 <td class="WidthForColunms">Last Name:</td>
+                 <td class="WidthForColunms">Credit:</td>
                  <td>
-                 <asp:TextBox ID="txtBxLname" runat="server"></asp:TextBox>
+                 <asp:TextBox ID="txtBxCredit" runat="server"></asp:TextBox>
                  </td>
              </tr>
              <tr>
-                 <td class="WidthForColunms">Enrollment Date:</td>
+                 <td class="WidthForColunms">DepartmentID:</td>
                  <td>
-                 <asp:TextBox ID="txtBxEnrDate" runat="server" ></asp:TextBox>
+                 <asp:TextBox ID="txtBxDepartmentID" runat="server" ></asp:TextBox>
                  </td>
              </tr>
              </table>

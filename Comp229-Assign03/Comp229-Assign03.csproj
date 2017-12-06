@@ -67,6 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="addstudents.aspx" />
+    <Content Include="addtocourse.aspx" />
+    <Content Include="Content\AddCourseStyleSheet.css" />
     <Content Include="Content\AddStudentStyleSheet.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -125,6 +127,13 @@
     </Compile>
     <Compile Include="addstudents.aspx.designer.cs">
       <DependentUpon>addstudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addtocourse.aspx.cs">
+      <DependentUpon>addtocourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addtocourse.aspx.designer.cs">
+      <DependentUpon>addtocourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
