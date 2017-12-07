@@ -42,7 +42,7 @@ namespace Comp229_Assign03
             conn = new SqlConnection(connectionString);
             // Create command
             comm = new SqlCommand("Select * from Students;", conn);
-            //comm.Parameters.Add("@")
+            
             // Enclose database code in Try-Catch-Finally
             try
             {

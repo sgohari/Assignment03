@@ -48,7 +48,9 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command and queris
-            comm = new SqlCommand("SELECT * FROM Students where StudentID="+StudentID,conn);
+            comm = new SqlCommand("SELECT * FROM Students where StudentID=@StudentID",conn);
+            //parameterized query for StudentID
+            comm.Parameters.AddWithValue("StudentID", StudentID);
             // Enclose database code in Try-Catch-Finally
             try
             {
@@ -85,7 +87,7 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command for database to be shown
-            comm = new SqlCommand("SELECT * FROM Courses where CourseID IN (Select CourseID from Enrollments where StudentID=" + StudentID + ")", conn);
+            comm = new SqlCommand("SELECT * FROM Courses WHERE CourseID IN (SELECT CourseID FROM Enrollments WHERE StudentID=" + StudentID + ")", conn);
             //Enclose database code in Try - Catch - Finally
             try
             {

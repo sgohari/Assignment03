@@ -13,31 +13,31 @@ namespace Comp229_Assign03 {
     public partial class addtocourse {
         
         /// <summary>
-        /// txtBxTitle control.
+        /// txtBxStudentID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBxTitle;
+        protected global::System.Web.UI.WebControls.TextBox txtBxStudentID;
         
         /// <summary>
-        /// txtBxCredit control.
+        /// txtBxCourseID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBxCredit;
+        protected global::System.Web.UI.WebControls.TextBox txtBxCourseID;
         
         /// <summary>
-        /// txtBxDepartmentID control.
+        /// txtBxGrade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBxDepartmentID;
+        protected global::System.Web.UI.WebControls.TextBox txtBxGrade;
         
         /// <summary>
         /// btnSave control.

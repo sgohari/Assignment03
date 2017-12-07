@@ -70,6 +70,7 @@
     <Content Include="addtocourse.aspx" />
     <Content Include="Content\AddCourseStyleSheet.css" />
     <Content Include="Content\AddStudentStyleSheet.css" />
+    <Content Include="Content\AddToCourseStyleSheet.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -77,7 +78,6 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\HomePageStyleSheet.css" />
-    <Content Include="Content\IndexStyleSheet.css" />
     <Content Include="Content\StyleSheetForMain.css" />
     <Content Include="default.aspx" />
     <Content Include="course.aspx" />

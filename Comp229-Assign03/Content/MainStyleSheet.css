@@ -39,3 +39,18 @@ footer {
 #BtnsforCourseAdd {
     background-color: #240D24;
 }
+#PageBtnsForCourseAdd {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #240D24;
+  border: none;
+  border-radius: 15px;
+}
+/*effect for btns in course page*/
+#PageBtnsForCourseAdd:hover{background-color:chocolate}

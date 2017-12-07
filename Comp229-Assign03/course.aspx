@@ -22,7 +22,10 @@
                     </Columns>
                 </asp:GridView>
                 <a id="PageBtns" class="btn-lg" href="update.aspx">To Update Page</a>
-                <a id="BtnsforCourseAdd" class="btn-lg" href="addtocourse.aspx">Add Student to Course</a>
+                <%-- Adding New students Required two steps
+                    First You must enter the existent StudentID
+                    2nd You must enter existent CourseID --%>
+                <a id="PageBtnsForCourseAdd" class="btn-lg" href="addtocourse.aspx"><i class="fa fa-plus"></i> Add Student to Course</a>
                 <br />
                 <br />
                 </div>

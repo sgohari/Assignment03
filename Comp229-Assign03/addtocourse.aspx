@@ -2,25 +2,31 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
             <div id="addCourse">
+                <h1>Here you can enroll student to a course!</h1>
+                <h2>Following steps are must.</h2>
+                <ul id="AddCourseul">
+                    <li>Know the studentID</li>
+                    <li>Know the CourseID</li>
+                </ul>
          <table>
               <tr>
-                 <td class="WidthForColunms">Title:</td>
+                 <td class="WidthForColunms">StudentID:</td>
                  <td>
-                 <asp:TextBox ID="txtBxTitle" runat="server"></asp:TextBox><br />
+                 <asp:TextBox ID="txtBxStudentID" runat="server"></asp:TextBox><br />
                              
                  </td>
              </tr>
      
              <tr>
-                 <td class="WidthForColunms">Credit:</td>
+                 <td class="WidthForColunms">CourseID:</td>
                  <td>
-                 <asp:TextBox ID="txtBxCredit" runat="server"></asp:TextBox>
+                 <asp:TextBox ID="txtBxCourseID" runat="server"></asp:TextBox>
                  </td>
              </tr>
              <tr>
-                 <td class="WidthForColunms">DepartmentID:</td>
+                 <td class="WidthForColunms">Grade:</td>
                  <td>
-                 <asp:TextBox ID="txtBxDepartmentID" runat="server" ></asp:TextBox>
+                 <asp:TextBox ID="txtBxGrade" runat="server" ></asp:TextBox>
                  </td>
              </tr>
              </table>

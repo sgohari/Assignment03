@@ -27,7 +27,8 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command
-            comm = new SqlCommand("SELECT * FROM Students where StudentID IN (select StudentID from Enrollments where CourseID=" + CourseID+")", conn);
+            comm = new SqlCommand("SELECT * FROM Students WHERE StudentID IN (SELECT StudentID FROM Enrollments WHERE CourseID=@CourseID)", conn);
+            comm.Parameters.AddWithValue("@CourseID", CourseID);
             // Enclose database code in Try-Catch-Finally
             try
             {
@@ -65,7 +66,8 @@ namespace Comp229_Assign03
             //comm = new SqlCommand("DELETE FROM Enrollments where StudentID =" + StudentID, conn);
             comm = new SqlCommand("DELETE FROM Enrollments WHERE StudentID = @StudentID", conn);
             comm.Parameters.AddWithValue("@StudentID", StudentID);
-            comm = new SqlCommand("DELETE FROM Students WHERE StudentID = " + StudentID, conn);
+            comm = new SqlCommand("DELETE FROM Students WHERE StudentID = @StudentID", conn);
+            comm.Parameters.AddWithValue("@StudentID", StudentID);
             // Enclose database code in Try-Catch-Finally
             try
             {

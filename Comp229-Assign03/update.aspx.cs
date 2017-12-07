@@ -33,7 +33,8 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command
-            comm = new SqlCommand("SELECT * FROM Students where StudentID="+StudentID, conn);
+            comm = new SqlCommand("SELECT * FROM Students where (StudentID)=(@StudentID)", conn);
+            comm.Parameters.AddWithValue("@StudentID", StudentID);
             // Enclose database code in Try-Catch-Finally
             try
             {
@@ -76,7 +77,6 @@ namespace Comp229_Assign03
                 conn.Open();
                 comm = conn.CreateCommand();
                 comm.CommandType = CommandType.Text;
-                //comm.CommandText = update Students set LastName = 'Amooo' WHERE StudentID = 301001;
                 comm.ExecuteNonQuery();
                 conn.Close();
 
@@ -106,15 +106,22 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command
-            comm = new SqlCommand("update Students set LastName = '" + txtBxLname.Text+"', FirstMidName='"+txtBxFname.Text+"', EnrollmentDate= '"+txtBxEnrDate.Text+"' WHERE StudentID = " + StudentID, conn);
+            //comm = new SqlCommand("update Students set LastName = '" + txtBxLname.Text + "', FirstMidName='" + txtBxFname.Text + "', EnrollmentDate= '" + txtBxEnrDate.Text + "' WHERE StudentID = " + StudentID, conn);
+            comm = new SqlCommand("UPDATE [Students] SET LastName=@LastName,FirstMidName=@FirstName,EnrollmentDate=@EnrollmentDate WHERE StudentID=@StudentID", conn);
+            comm.Parameters.AddWithValue("@LastName", txtBxLname.Text);
+            comm.Parameters.AddWithValue("@FirstName", txtBxFname.Text);
+            comm.Parameters.AddWithValue("@EnrollmentDate", txtBxEnrDate.Text);
+            comm.Parameters.AddWithValue("@StudentID", StudentID);
             // Enclose database code in Try-Catch-Finally
             try
             {
                 // Open the connection
                 conn.Open();
                 // Execute the command
+             
                 reader = comm.ExecuteReader();
-                   // Close the reader
+                // Close the reader
+              // comm.ExecuteNonQuery();
                 reader.Close();
             }
             finally

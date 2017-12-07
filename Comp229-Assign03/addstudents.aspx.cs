@@ -38,13 +38,11 @@ namespace Comp229_Assign03
                
                 comm = conn.CreateCommand();
                 comm.CommandType = CommandType.Text;
-                //adding student to enrollments table. 
-                //comm = new SqlCommand("INSERT INTO Enrollments(StudentID) VALUES (@StudentID=Id); Insert SCOPE_IDENTITY();", conn);
-                ////parametarized Query for adding to enrollment.
-                //comm.Parameters.AddWithValue("@StudentID", txtBxStudentID.Text);
-                //comm.ExecuteNonQuery();
-                //comm.Parameters.Clear();
-                comm= new SqlCommand("INSERT INTO Students (FirstMidName,LastName,EnrollmentDate) Values(@FirstName, @LastName, @EnrollmentDate)", conn);
+                // Create command and queris
+                comm = new SqlCommand("INSERT INTO Enrollments (StudentID) VALUES(@StudentID)", conn);
+                //parameterizing the query
+                comm.Parameters.AddWithValue("@StudentID", txtBxStudentID.Text);
+                comm = new SqlCommand("INSERT INTO Students (FirstMidName,LastName,EnrollmentDate) VALUES(@FirstName, @LastName, @EnrollmentDate)", conn);
                 //paramaterarized quaries for saving values to the StudentTable.
                 comm.Parameters.AddWithValue("FirstName", txtBxFname.Text);
                 comm.Parameters.AddWithValue("@LastName", txtBxLname.Text);

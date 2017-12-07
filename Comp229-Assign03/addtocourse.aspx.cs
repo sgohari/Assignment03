@@ -30,10 +30,10 @@ namespace Comp229_Assign03
 
                 comm = conn.CreateCommand();
                 comm.CommandType = CommandType.Text;
-                comm = new SqlCommand("INSERT INTO Course (Title,Credits,DepartmentID) Values(@Title, @Credits, @DepartmentID)", conn);
-                comm.Parameters.AddWithValue("@Title", txtBxTitle.Text);
-                comm.Parameters.AddWithValue("@Credit", txtBxCredit.Text);
-                comm.Parameters.AddWithValue("@DepartmentID", txtBxDepartmentID.Text);
+                comm = new SqlCommand("INSERT INTO Enrollments (StudentID,CourseID,Grade) VALUES(@StudentID, @CourseID, @Grade)", conn);
+                comm.Parameters.AddWithValue("@StudentID", txtBxStudentID.Text);
+                comm.Parameters.AddWithValue("@CourseID", txtBxCourseID.Text);
+                comm.Parameters.AddWithValue("@Grade", txtBxGrade.Text);
 
                 conn.Open();
                 comm.ExecuteNonQuery();
