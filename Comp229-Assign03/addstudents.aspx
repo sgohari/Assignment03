@@ -2,19 +2,14 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div id="addStudent">
+            <h1>add new student here!</h1>
          <table>
-             <tr>
-                 <td class="WidthForColunms">StudentID:</td>
-                 <td>
-                 <asp:TextBox ID="txtBxStudentID" runat="server" ></asp:TextBox><br />
-           
-                 </td>
-             </tr>
+
               <tr>
                  <td class="WidthForColunms">First Name:</td>
                  <td>
-                 <asp:TextBox ID="txtBxFname" runat="server" ></asp:TextBox><br />
-           
+                 <asp:TextBox ID="txtBxFname" runat="server" ></asp:TextBox>
+           <br />
                  </td>
              </tr>
      
@@ -22,6 +17,7 @@
                  <td class="WidthForColunms">Last Name:</td>
                  <td>
                  <asp:TextBox ID="txtBxLname" runat="server"></asp:TextBox>
+                     <br />
                  </td>
              </tr>
              <tr>

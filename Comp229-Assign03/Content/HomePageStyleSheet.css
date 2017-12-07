@@ -27,7 +27,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Bookman Old Style';
-    color: chocolate;
+    color:coral;
 }
 /*Desing for banner *//**/
 #banner{
@@ -44,6 +44,14 @@ hr {
     border-style:groove;
     border-width: 2px;
     color:red;
+}
+h3 {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    text-transform:fullsize-kana;
+    font-family: 'Bookman Old Style';
+    color:gray;
 }
 /*designing the button for adding student. */
 #PageBtns {

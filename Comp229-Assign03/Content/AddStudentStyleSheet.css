@@ -1,12 +1,15 @@
 ﻿/*div for main contain of addstudent page*/
 #addStudent {
     padding-left:20px;
-    font-size:large;
+    font-size:xx-large;
+
 }
 
 /*adding width for the table col*/
 .WidthForColunms 
 {
-    width:400px;
+    width:300px;
     float:right;
+    padding-top:10px;
+    padding-bottom:10px;
 }
