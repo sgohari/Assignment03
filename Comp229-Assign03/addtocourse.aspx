@@ -2,11 +2,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="addCourse">
-        <h1>Here you can enroll student to a course!</h1>
+        <h1>Here you can enroll a student to a course!</h1>
         <h2>Following steps are must.</h2>
         <strong>
         <ul id="AddCourseul">
-            <li>Enter the Existance studentID</li>
+            <li>Enter the Existance StudentID</li>
             <li>Enter the Existance CourseID</li>
         </ul>
             </strong>
@@ -24,6 +24,9 @@
                 <td>CourseID:</td>
                 <td>
                     <asp:TextBox ID="txtBxCourseID" runat="server"></asp:TextBox>
+<%--                    <asp:DropDownList runat="server" ID="ddlAddCourse" DataTextField="CourseID" DataValueField="CourseID">
+
+                    </asp:DropDownList>--%>
                 </td>
             </tr>
             <tr>

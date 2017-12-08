@@ -85,6 +85,7 @@ namespace Comp229_Assign03
             {
                 // Close the connection
                 conn.Close();
+                //Redirect the user back to Home page.
                 Response.Redirect("default.aspx");
             }
         }

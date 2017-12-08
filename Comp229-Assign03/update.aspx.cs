@@ -15,6 +15,7 @@ namespace Comp229_Assign03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Taken from demo Week6-9.
             if (!IsPostBack)
             {
                 this.UpdateBindList();
@@ -22,6 +23,7 @@ namespace Comp229_Assign03
         }
         private void UpdateBindList()
         {
+            // Define variables for storing data infos
             int StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
             String LName = Convert.ToString(txtBxFname.Text);
             // Define data objects
@@ -50,12 +52,6 @@ namespace Comp229_Assign03
                     //txtBxEnrDate.Text += reader["EnrollmentDate"];
                 }
 
-                
-                // Bind the reader to the DataList
-                //GvStudent.DataSource = reader;
-                //GvStudent.DataBind();
-
-                // Close the reader
                 reader.Close();
             }
             finally
@@ -67,13 +63,16 @@ namespace Comp229_Assign03
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            // Define data objects
             SqlConnection conn;
             SqlCommand comm;
             // Read the connection string from Web.config
             string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
             try
             {
+                // Initialize connection
                 conn = new SqlConnection(connectionString);
+                //opening connection
                 conn.Open();
                 comm = conn.CreateCommand();
                 comm.CommandType = CommandType.Text;
@@ -84,12 +83,14 @@ namespace Comp229_Assign03
             catch (Exception) { }
             finally
             {
+                //Redirect the user back to home page.
                 Response.Redirect("default.aspx");
             }
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
+            //Redirect the user back to home page.
             Response.Redirect("default.aspx");
         }
 
@@ -108,6 +109,7 @@ namespace Comp229_Assign03
             // Create command
             //comm = new SqlCommand("update Students set LastName = '" + txtBxLname.Text + "', FirstMidName='" + txtBxFname.Text + "', EnrollmentDate= '" + txtBxEnrDate.Text + "' WHERE StudentID = " + StudentID, conn);
             comm = new SqlCommand("UPDATE [Students] SET LastName=@LastName,FirstMidName=@FirstName,EnrollmentDate=@EnrollmentDate WHERE StudentID=@StudentID", conn);
+            //Parameterized the query here
             comm.Parameters.AddWithValue("@LastName", txtBxLname.Text);
             comm.Parameters.AddWithValue("@FirstName", txtBxFname.Text);
             comm.Parameters.AddWithValue("@EnrollmentDate", txtBxEnrDate.Text);
@@ -128,6 +130,7 @@ namespace Comp229_Assign03
             {
                 // Close the connection
                 conn.Close();
+                //Redirect the user back to home page.
                 Response.Redirect("default.aspx");
             }
         }

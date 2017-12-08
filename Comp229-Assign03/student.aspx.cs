@@ -13,7 +13,7 @@ namespace Comp229_Assign03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //taken fro Week6-9 Demo
             if (!IsPostBack)
             {
                 BindList();

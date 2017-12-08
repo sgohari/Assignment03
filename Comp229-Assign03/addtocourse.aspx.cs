@@ -19,7 +19,14 @@ namespace Comp229_Assign03
         string connectionString = ConfigurationManager.ConnectionStrings["Students"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //conn = new SqlConnection(connectionString);
+            ////Creating command
+            //comm = conn.CreateCommand();
+            //comm.CommandType = CommandType.Text;
+            //comm = new SqlCommand("SELECT CourseID FROM Course", conn);
+            //conn.Open();
+            //ddlAddCourse.DataSource();
+            //ddlAddCourse.DataBind();
         }
 
         protected void btnSave_Click(object sender, EventArgs e)

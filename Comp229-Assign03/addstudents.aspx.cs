@@ -61,6 +61,7 @@ namespace Comp229_Assign03
             }
             finally
             {
+                // Redirect the user back to Home Page
                 Response.Redirect("default.aspx");
 
             }
