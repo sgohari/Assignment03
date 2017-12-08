@@ -18,6 +18,7 @@
     <link href="Content/AddToCourseStyleSheet.css" rel="stylesheet" />
     <link href="Content/AddCourseStyleSheet.css" rel="stylesheet" />
     <link href="Content/AddCourseStyleSheet.css" rel="stylesheet" />
+    <link href="Content/UpdateStyleSheet.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
        <style type="text/css">

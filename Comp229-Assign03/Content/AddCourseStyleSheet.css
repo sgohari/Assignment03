@@ -17,6 +17,33 @@
   background-color: #240D24;
   border: none;
   border-radius: 15px;
+  width:300px;
+  height:70px;
 }
-/*effect for btns in course page*/
 #PageBtns:hover{background-color:chocolate}
+  /*effect for Add Student  btns in course page
+    A Id was not allowed to be used in two buttons
+    so with slight name changed i used two different ID with same purpose. 
+*/
+#PageBtn
+ {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #240D24;
+  border: none;
+  border-radius: 15px;
+  width:300px;
+  height:70px;
+  
+}
+/*effect for Add Student  btns in course page
+    A Id was not allowed to be used in two buttons
+    so with slight name changed i used two different ID with same purpose. 
+*/
+#PageBtn:hover{background-color:chocolate}

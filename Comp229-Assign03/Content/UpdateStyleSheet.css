@@ -1,26 +1,19 @@
-﻿/*div for main contain of addstudent page*/
-#addStudent {
+﻿/*div for main contain of update page*/
+#UpdateStudent {
     padding-left:10px;
     font-size:xx-large;
 
 }
 
 /*adding width for the table col*/
-.WidthForColunms 
-{
-    width:300px;
-    float:right;
-    padding-top:10px;
-    padding-bottom:10px;
-}
-#addStudentTable td {
+#UpdateStudentTable td {
     width:380px;
     text-align:right;
     padding-bottom:10px;
     padding-top:10px;  
 }
 /*designing the button for adding student. */
-.PageBtnsforAddStudentPage {
+.BtnUpdateStudent {
   display: inline-block;
   padding: 25px 25px;
   font-size: 24px;
@@ -36,14 +29,14 @@
   
 }
 
-.PageBtnsforAddStudentPage:hover{background-color:chocolate}
+.BtnUpdateStudent:hover{background-color:chocolate}
 
-.PageBtnsforAddStudentPage:active {
+.BtnUpdateStudent:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-#BtnDiv {
+#BtnUpdateDiv {
     width:450px;
     margin-left:auto;
     margin-right:100px;

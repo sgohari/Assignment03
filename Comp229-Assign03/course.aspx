@@ -21,11 +21,14 @@
                         
                     </Columns>
                 </asp:GridView>
-                <a id="PageBtns" class="btn-lg" href="update.aspx">To Update Page</a>
+                <a id="PageBtns" href="update.aspx">To Update Page</a>
                 <%-- Adding New students Required two steps
                     First You must enter the existent StudentID
-                    2nd You must enter existent CourseID --%>
-                <a id="PageBtnsForCourseAdd" class="btn-lg" href="addtocourse.aspx"><i class="fa fa-plus"></i> Add Student to Course</a>
+                    2nd You must enter existent CourseID
+                    3rd it has been done on saparate page, because it was easy for me to 
+                    run my queries. it was done for simplicity. I could not
+                    come with idea of doing everything in one page. --%>
+                <a id="PageBtn" href="addtocourse.aspx"><i class="fa fa-plus"></i>Add a Course</a>
                 <br />
                 <br />
                 </div>

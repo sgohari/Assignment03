@@ -79,6 +79,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\HomePageStyleSheet.css" />
     <Content Include="Content\StyleSheetForMain.css" />
+    <Content Include="Content\UpdateStyleSheet.css" />
     <Content Include="default.aspx" />
     <Content Include="course.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />

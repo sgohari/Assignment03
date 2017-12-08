@@ -26,6 +26,7 @@ namespace Comp229_Assign03
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
+            //redirecting the users to home page
             Response.Redirect("default.aspx");
         }
 
@@ -34,18 +35,22 @@ namespace Comp229_Assign03
 
             try
             {
+                // Define data objects. it is taken from demo code. 
                 conn = new SqlConnection(connectionString);
                
                 comm = conn.CreateCommand();
                 comm.CommandType = CommandType.Text;
                 // Create command and queris
                 comm = new SqlCommand("INSERT INTO Students (FirstMidName,LastName,EnrollmentDate) VALUES(@FirstName, @LastName, @EnrollmentDate)", conn);
-                //paramaterarized quaries for saving values to the StudentTable.
+                //paramaterarized quary for saving values to the StudentTable.
                 comm.Parameters.AddWithValue("FirstName", txtBxFname.Text);
                 comm.Parameters.AddWithValue("@LastName", txtBxLname.Text);
                 comm.Parameters.AddWithValue("@EnrollmentDate", txtBxEnrDate.Text);
+                // Open the connection
                 conn.Open();
+                //executing the query
                 comm.ExecuteNonQuery();
+                //Closing the connection
                 conn.Close();
 
             }

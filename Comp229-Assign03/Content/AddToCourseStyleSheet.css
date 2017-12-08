@@ -1,49 +1,48 @@
-﻿#AddCourseul {
+﻿/*div for main contain of addstudent page*/
+#addCourse {
+    padding-left:10px;
+    font-size:xx-large;
+    width:980px;
+
+}
+
+#addCourse ul li
+{
   list-style-type: none;
-  border-color:#240D24;
-  padding-right:25px;
-  text-decoration:wavy;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-shadow:unset;
+}
+
+#addCourseTable td {
+    width:380px;
+    text-align:right;
+    padding-bottom:10px;
+    padding-top:10px;  
+}
+/*designing the button for adding student. */
+.BtnaddCoursePage {
+  display: inline-block;
+  padding: 25px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #240D24;
+  border: none;
+  border-radius: 15px;
+  width:195px;
   
 }
- 
-AddCourseul li {
-  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  border-bottom: 1px solid #ccc;
-  background:round;
-}
-h2{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size:x-large;
-    text-transform:uppercase;
-    font-size:xx-large;
-    padding-left:20px;
-   
-}
- 
-AddCourseul li:last-child {
-  border: none;
-}
- 
-AddCourseul li a {
-  text-decoration: none;
-  color: #000;
-  display: block;
-  width: 200px;
 
-  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-  transition: font-size 0.3s ease, background-color 0.3s ease;
+.BtnaddCoursePage:hover{background-color:chocolate}
+
+.BtnaddCoursePage:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
- 
-AddCourseul li a:hover {
-  font-size: 30px;
-  background: #f6f6f6;
-}
-#paddingTable {
-    padding-left:10px;
-    padding-right:10px;
+#BtnDivforAddCourse {
+    width:450px;
+    margin-left:auto;
+    margin-right:98px;
 }
