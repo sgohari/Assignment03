@@ -64,10 +64,13 @@ namespace Comp229_Assign03
             conn = new SqlConnection(connectionString);
             // Create command
             //comm = new SqlCommand("DELETE FROM Enrollments where StudentID =" + StudentID, conn);
+            comm = new SqlCommand("DELETE FROM Courses WHERE StudentID = @StudentID", conn);
+            comm.Parameters.AddWithValue("@StudentID", StudentID);
             comm = new SqlCommand("DELETE FROM Enrollments WHERE StudentID = @StudentID", conn);
             comm.Parameters.AddWithValue("@StudentID", StudentID);
             comm = new SqlCommand("DELETE FROM Students WHERE StudentID = @StudentID", conn);
             comm.Parameters.AddWithValue("@StudentID", StudentID);
+
             // Enclose database code in Try-Catch-Finally
             try
             {

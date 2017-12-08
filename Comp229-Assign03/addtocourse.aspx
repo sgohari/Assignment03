@@ -4,12 +4,12 @@
     <div id="addCourse">
         <h1>Here you can enroll a student to a course!</h1>
         <h2>Following steps are must.</h2>
-        <strong>
+       
         <ul id="AddCourseul">
             <li>Enter the Existance StudentID</li>
             <li>Enter the Existance CourseID</li>
         </ul>
-            </strong>
+         
         <hr />
         <table id="addCourseTable">
             <tr>
