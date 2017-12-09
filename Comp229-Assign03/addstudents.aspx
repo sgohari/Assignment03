@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="AddStudent" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addstudents.aspx.cs" Inherits="Comp229_Assign03.addstudents" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContains" runat="server">
     <div id="addStudent">
         <h1>add new student here!</h1>
         <table id="addStudentTable">

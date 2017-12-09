@@ -124,9 +124,11 @@ namespace Comp229_Assign03
             // Initialize connection
             conn = new SqlConnection(connectionString);
             // Create command for deleting the reference
-            commTwo = new SqlCommand("DELETE FROM Enrollments where StudentID=" + StudentID, conn);
+            commTwo = new SqlCommand("DELETE FROM Enrollments WHERE StudentID=@StudentID", conn);
+            commTwo.Parameters.AddWithValue("@StudentID", StudentID);
            //command for deleting from student table.
-            comm = new SqlCommand("DELETE FROM Students Where StudentID=" + StudentID, conn);
+            comm = new SqlCommand("DELETE FROM Students WHERE StudentID=@StudentID", conn);
+            comm.Parameters.AddWithValue("@StudentID", StudentID);
             // Enclose database code in Try-Catch-Finally
             try
             {

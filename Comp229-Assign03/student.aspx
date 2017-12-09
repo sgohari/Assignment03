@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="student" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="student.aspx.cs" Inherits="Comp229_Assign03.student" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContains" runat="server">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-1 col-md-8">

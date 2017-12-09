@@ -43,7 +43,7 @@ namespace Comp229_Assign03
                 // Create command and queris
                 comm = new SqlCommand("INSERT INTO Students (FirstMidName,LastName,EnrollmentDate) VALUES(@FirstName, @LastName, @EnrollmentDate)", conn);
                 //paramaterarized quary for saving values to the StudentTable.
-                comm.Parameters.AddWithValue("FirstName", txtBxFname.Text);
+                comm.Parameters.AddWithValue("@FirstName", txtBxFname.Text);
                 comm.Parameters.AddWithValue("@LastName", txtBxLname.Text);
                 comm.Parameters.AddWithValue("@EnrollmentDate", txtBxEnrDate.Text);
                 // Open the connection

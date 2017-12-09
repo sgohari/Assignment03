@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="course" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="course.aspx.cs" Inherits="Comp229_Assign03.enrollment" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContains" runat="server">
         <h1> Welcome to the Course page</h1>
      <div class="container">
         <div class="row">
             <div class="col-md-offset-1 col-md-8">
+                <%-- The delete button here only remove student from the course not entirely from database. --%>
     <asp:GridView ID="GvCourse" runat="server" AutoGenerateColumns="false"
                     cssClass="table table-bordered table-striped table-hover" DataKeyNames="StudentID"
-                    OnRowDeleting="StudentGridView_RowDeleting">
+                    OnRowDeleting="GvCourse_RowDeleting">
                     <Columns>
                         
                         <asp:BoundField DataField="LastName" HeaderText="Last Name" Visible="true" />

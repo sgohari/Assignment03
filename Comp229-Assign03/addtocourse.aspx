@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="AddCourse" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addtocourse.aspx.cs" Inherits="Comp229_Assign03.addtocourse" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContains" runat="server">
     <div id="addCourse">
         <h1>Here you can enroll a student to a course!</h1>
         <h2>Following steps are must.</h2>
