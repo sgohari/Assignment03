@@ -20,7 +20,7 @@
              <tr>
                  <td>Enrollment Date:</td>
                  <td>
-                 <asp:TextBox ID="txtBxEnrDate" runat="server" ></asp:TextBox>
+                 <asp:TextBox ID="txtBxEnrDate" runat="server" TextMode="Date" ></asp:TextBox>
                  </td>
              </tr>
              </table>

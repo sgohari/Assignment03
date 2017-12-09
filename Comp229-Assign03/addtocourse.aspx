@@ -15,7 +15,7 @@
             <tr>
                 <td>StudentID:</td>
                 <td>
-                    <asp:TextBox ID="txtBxStudentID" runat="server"></asp:TextBox><br />
+                    <asp:TextBox ID="txtBxStudentID" runat="server" TextMode="Number"></asp:TextBox><br />
 
                 </td>
             </tr>
@@ -23,7 +23,7 @@
             <tr>
                 <td>CourseID:</td>
                 <td>
-                    <asp:TextBox ID="txtBxCourseID" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtBxCourseID" runat="server" TextMode="Number"></asp:TextBox>
 <%--                    <asp:DropDownList runat="server" ID="ddlAddCourse" DataTextField="CourseID" DataValueField="CourseID">
 
                     </asp:DropDownList>--%>
@@ -32,7 +32,7 @@
             <tr>
                 <td >Grade:</td>
                 <td>
-                    <asp:TextBox ID="txtBxGrade" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtBxGrade" runat="server" TextMode="Number"></asp:TextBox>
                 </td>
             </tr>
         </table>
